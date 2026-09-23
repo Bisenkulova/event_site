@@ -1,0 +1,10 @@
+{% extends 'base.html' %}{% block title %}Редактирование статьи{% endblock %}{% block content %}
+<div class="page-head"><h1>Редактирование материала</h1><p>Раздел: {{ categories[item['category']] }}. Адрес материала остаётся прежним.</p></div>
+<form class="form wide" method="post"><input type="hidden" name="csrf" value="{{ csrf_token }}">
+<label>Заголовок<input name="title" value="{{ item['title'] }}" required maxlength="150"></label>
+<label>Анонс<textarea name="lead" required rows="3">{{ item['lead'] }}</textarea></label>
+<label>Первый смысловой блок<textarea name="body1" required rows="7">{{ item['body1'] }}</textarea></label>
+<label>Контрольный шаг<textarea name="body2" required rows="7">{{ item['body2'] }}</textarea></label>
+<label class="checkbox"><input type="checkbox" name="published" value="1" {% if item['published'] %}checked{% endif %}> Материал опубликован</label>
+<button type="submit">Сохранить материал</button></form>
+{% endblock %}
