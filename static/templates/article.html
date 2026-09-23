@@ -1,8 +1,0 @@
-{% extends 'base.html' %}{% block title %}{{ item['title'] }}{% endblock %}{% block content %}
-<nav class="crumb" aria-label="Путь"><a href="{{ url_for('home') }}">Главная</a> / <a href="{{ url_for('article_index',category=item['category']) }}">{{ categories[item['category']] }}</a></nav>
-<article class="reading"><p class="eyebrow">{{ categories[item['category']] }} · обновлено {{ item['updated_at'] }}</p><h1>{{ item['title'] }}</h1><p class="lead">{{ item['lead'] }}</p>
-<img class="article-illustration" src="{{ url_for('static',filename=item['category']+'.svg') }}" alt="{{ categories[item['category']] }} — тематическая иллюстрация">
-<h2>Что учитывать при подготовке</h2><p>{{ item['body1'] }}</p><h2>Контрольный шаг</h2><p>{{ item['body2'] }}</p>
-<p><a href="{{ url_for('contacts') }}">Сформулировать вопрос по событию</a></p></article>
-<section><h2>По этой теме</h2><ul>{% for other in related %}<li><a href="{{ url_for('article',slug=other['slug']) }}">{{ other['title'] }}</a></li>{% endfor %}</ul></section>
-{% endblock %}

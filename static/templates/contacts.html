@@ -1,8 +1,0 @@
-{% extends 'base.html' %}{% block title %}Обратная связь{% endblock %}{% block content %}
-<div class="page-head"><p class="eyebrow">Демонстрация обратной связи</p><h1>Задать вопрос по сценарию</h1><p>Сообщение остаётся внутри учебного проекта и доступно редактору. Это не заявка в действующее агентство.</p></div>
-{% if not g.user %}<p><a class="button" href="{{ url_for('register') }}">Создать учётную запись</a> или <a href="{{ url_for('login') }}">войти</a>.</p>{% else %}
-<form class="form" method="post" action="{{ url_for('new_message') }}"><input type="hidden" name="csrf" value="{{ csrf_token }}">
-<label>Тема вопроса<input name="subject" minlength="4" maxlength="100" required placeholder="Например, тайминг для школьной группы"></label>
-<label>Текст сообщения<textarea name="body" minlength="15" maxlength="2000" required rows="7" placeholder="Опишите учебный сценарий без данных реальных заказчиков"></textarea></label>
-<button type="submit">Отправить в учебный кабинет</button></form>{% endif %}
-{% endblock %}

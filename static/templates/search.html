@@ -1,5 +1,0 @@
-{% extends 'base.html' %}{% block title %}Поиск{% endblock %}{% block content %}
-<div class="page-head"><h1>Результаты поиска</h1><p>{% if term %}Запрос: «{{ term }}». Найдено материалов: {{ items|length }}.{% else %}Введите слово или фразу в поле поиска выше.{% endif %}</p></div>
-<div class="cards">{% for item in items %}<article class="card"><p class="eyebrow">{{ categories[item['category']] }}</p><h2><a href="{{ url_for('article',slug=item['slug']) }}">{{ item['title'] }}</a></h2><p>{{ item['lead'] }}</p></article>{% endfor %}</div>
-{% if term and not items %}<p>Попробуйте другой запрос: например, «площадка», «бюджет» или «тайминг».</p>{% endif %}
-{% endblock %}

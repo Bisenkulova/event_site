@@ -1,6 +1,0 @@
-{% extends 'base.html' %}{% block title %}Личный кабинет{% endblock %}{% block content %}
-<div class="page-head"><h1>Кабинет пользователя {{ g.user['username'] }}</h1><p>Сообщения и ответы редактора видны только владельцу кабинета.</p><a href="{{ url_for('contacts') }}">Написать новое сообщение</a></div>
-{% for m in messages %}<article class="message"><p class="small">{{ m['created_at'] }}</p><h2>{{ m['subject'] }}</h2><p>{{ m['body'] }}</p>
- {% if m['reply'] %}<div class="answer"><strong>Ответ редактора:</strong><p>{{ m['reply'] }}</p></div>{% else %}<p class="small">Ожидает ответа</p>{% endif %}</article>
-{% else %}<p>Сообщений пока нет.</p>{% endfor %}
-{% endblock %}
