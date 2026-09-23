@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block title %}Статьи{% endblock %}{% block content %}
+<div class="page-head"><p class="eyebrow">Редакционный раздел</p><h1>Статьи для подготовки события</h1><p>Три раздела по пять материалов. Выберите направление или найдите конкретный вопрос.</p></div>
+<nav class="chips" aria-label="Фильтр статей"><a {% if not selected %}aria-current="page"{% endif %} href="{{ url_for('article_index') }}">Все</a>
+{% for key,name in categories.items() %}<a {% if selected==key %}aria-current="page"{% endif %} href="{{ url_for('article_index',category=key) }}">{{ name }}</a>{% endfor %}</nav>
+<div class="cards article-grid">{% for item in items %}<article class="card"><p class="eyebrow">{{ categories[item['category']] }}</p>
+  <h2><a href="{{ url_for('article',slug=item['slug']) }}">{{ item['title'] }}</a></h2><p>{{ item['lead'] }}</p><span class="small">Обновлено: {{ item['updated_at'] }}</span></article>{% else %}<p>Материалов пока нет.</p>{% endfor %}</div>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'base.html' %}{% block title %}Услуги{% endblock %}{% block content %}
+<div class="page-head"><p class="eyebrow">Выбор формата</p><h1>Направления мероприятий</h1><p>Учебная модель процесса: содержание работ уточняется в брифе и смете для конкретного события.</p></div>
+{% for key,name in categories.items() %}<section class="service-row"><div><img class="service-illustration" src="{{ url_for('static',filename=key+'.svg') }}" alt="{{ {'children':'Шары и флажки на празднике','wedding':'Два кольца и цветок','corporate':'Три участника вокруг общего стола'}[key] }}"><p class="eyebrow">Направление {{ loop.index }}</p><h2>{{ name }}</h2>
+<p>{{ {'children':'Планирование по возрасту, выбор безопасной площадки, активная и спокойная часть, резерв на случай дождя.','wedding':'Концепция, площадка, прозрачная смета, рассадка, общий тайминг и координация подрядчиков.','corporate':'Цель заказчика, подбор формата, участие сотрудников, техническая проверка и оценка результата.'}[key] }}</p></div>
+<div><h3>Что уточнить до сметы</h3><ul><li>Дата и число участников</li><li>Приоритеты и ограничения</li><li>Площадка и её требования</li><li>Ответственные за согласование</li></ul><a href="{{ url_for('article_index',category=key) }}">Открыть материалы раздела</a></div></section>{% endfor %}
+{% endblock %}

@@ -1,0 +1,3 @@
+{% extends 'base.html' %}{% block title %}Страница не найдена{% endblock %}{% block content %}
+<div class="error-page"><p class="eyebrow">Ошибка 404</p><h1>Такой страницы нет</h1><p>Адрес мог измениться. Найдите статью через поиск или вернитесь к списку материалов.</p><a class="button" href="{{ url_for('home') }}">На главную</a> <a href="{{ url_for('sitemap') }}">Карта сайта</a></div>
+{% endblock %}

@@ -1,0 +1,7 @@
+{% extends 'base.html' %}{% block title %}Карта сайта{% endblock %}{% block content %}
+<div class="page-head"><h1>Карта сайта</h1><p>Основные страницы, тематические разделы и служебные маршруты.</p></div>
+<ul class="sitemap"><li><a href="{{ url_for('home') }}">Главная</a></li><li><a href="{{ url_for('services') }}">Услуги</a></li>
+<li><a href="{{ url_for('article_index') }}">Статьи</a><ul>{% for key,name in categories.items() %}<li><a href="{{ url_for('article_index',category=key) }}">{{ name }} — пять статей</a></li>{% endfor %}</ul></li>
+<li><a href="{{ url_for('portfolio') }}">Примеры проектов</a></li><li><a href="{{ url_for('estimate') }}">Как составить смету</a></li>
+<li><a href="{{ url_for('about') }}">О проекте</a></li><li><a href="{{ url_for('contacts') }}">Обратная связь</a></li><li><a href="{{ url_for('search') }}">Поиск</a></li></ul>
+{% endblock %}
