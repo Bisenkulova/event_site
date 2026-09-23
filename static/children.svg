@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="320" viewBox="0 0 800 320" role="img" aria-label="Шары и флажки">
+<rect width="800" height="320" fill="#f8e2c9"/><path d="M0 80 Q200 170 400 60 Q600 165 800 80" fill="none" stroke="#ac4f30" stroke-width="4"/>
+<g fill="#ac4f30"><path d="M105 115l35 10-30 42z"/><path d="M250 115l36 2-20 43z"/><path d="M430 64l37 3-17 39z"/><path d="M610 118l35-8-10 42z"/></g>
+<ellipse cx="320" cy="195" rx="43" ry="58" fill="#c96c4f"/><ellipse cx="485" cy="190" rx="43" ry="55" fill="#e0a065"/><path d="M320 252q30 45 0 65m165-72q-28 43 0 70" fill="none" stroke="#87533b" stroke-width="3"/>
+</svg>

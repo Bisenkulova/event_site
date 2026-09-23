@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="320" viewBox="0 0 800 320" role="img" aria-label="Работа команды">
+<rect width="800" height="320" fill="#dee8e3"/><rect x="210" y="190" width="380" height="25" rx="5" fill="#647d79"/><rect x="390" y="215" width="20" height="70" fill="#647d79"/>
+<g fill="#ac4f30"><circle cx="300" cy="120" r="28"/><circle cx="400" cy="95" r="28"/><circle cx="500" cy="120" r="28"/></g>
+<path d="M258 165q42-40 84 0v40h-84zm100-25q42-40 84 0v65h-84zm100 25q42-40 84 0v40h-84z" fill="#536d73"/>
+</svg>

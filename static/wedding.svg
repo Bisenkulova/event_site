@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="320" viewBox="0 0 800 320" role="img" aria-label="Кольца и цветок">
+<rect width="800" height="320" fill="#f0e7dd"/><circle cx="345" cy="175" r="76" fill="none" stroke="#af7e46" stroke-width="17"/><circle cx="445" cy="175" r="76" fill="none" stroke="#c69a68" stroke-width="17"/>
+<path d="M395 62q-45-65-90 0 45-15 90 0zm0 0q45-65 90 0-45-15-90 0z" fill="#ca7359"/><circle cx="395" cy="62" r="17" fill="#e6a28a"/><path d="M395 80v45" stroke="#546f54" stroke-width="5"/>
+</svg>
